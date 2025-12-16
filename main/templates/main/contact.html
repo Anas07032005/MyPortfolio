@@ -1,0 +1,973 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <span class="section-badge">GET IN TOUCH</span>
+                    <h1 class="display-4 fw-bold hero-title mb-4">
+                        Let's <span class="gradient-text">Connect</span>
+                    </h1>
+                    <p class="lead hero-text mb-5">
+                        Have a project in mind? Let's collaborate! Whether you need embedded solutions,
+                        IoT systems, or software development, I'm here to help bring your ideas to life.
+                    </p>
+                    <div class="contact-info-cards">
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h6>Email Me</h6>
+                                <p>anasulkamileen@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h6>Call Me</h6>
+                                <p>+91 7397698786</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Melvisharam, Tamil Nadu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-image-wrapper">
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                    </div>
+                    <div class="contact-illustration">
+                        <img src="{% static 'main/images/anasul_profile.jpg' %}"
+                             class="img-fluid contact-img floating"
+                             alt="Anasul Kamileen - Contact Me"
+                             onerror="this.src='https://images.unsplash.com/photo-1551836026-d5c2c3c6b6e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        <div class="message-badge">
+                            <i class="fas fa-comment-dots"></i>
+                            <span>Quick Response</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="contact-form-card">
+                    <div class="row g-0">
+                        <div class="col-lg-5">
+                            <div class="form-sidebar">
+                                <h3 class="form-title">Quick Info</h3>
+                                <div class="contact-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <h6>Location</h6>
+                                            <p>Melvisharam, Tamil Nadu</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <h6>Response Time</h6>
+                                            <p>Within 24 hours</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <div>
+                                            <h6>Availability</h6>
+                                            <p>Open for projects</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <div>
+                                            <h6>Education</h6>
+                                            <p>B.E. ECE (Final Year)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="social-connect">
+                                    <h6>Connect With Me</h6>
+                                    <div class="social-links">
+                                        <a href="https://github.com/Anas07032005" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                        <a href="https://www.linkedin.com/in/anasul-kamileen-34b335322" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                        <a href="mailto:anasulkamileen@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                                        <a href="tel:+917397698786" class="social-icon"><i class="fas fa-phone"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="form-content">
+                                <h3 class="form-title">Send a Message</h3>
+                                <form id="contactForm" class="contact-form">
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                        <div class="form-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                        <label for="email">Email Address</label>
+                                        <div class="form-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                        <div class="form-icon">
+                                            <i class="fas fa-tag"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <select class="form-select" id="projectType" required>
+                                            <option selected disabled>Select project type</option>
+                                            <option value="embedded">Embedded Systems</option>
+                                            <option value="iot">IoT Solutions</option>
+                                            <option value="software">Software Development</option>
+                                            <option value="ai">AI/ML Projects</option>
+                                            <option value="consulting">Technical Consulting</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="projectType">Project Type</label>
+                                        <div class="form-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
+                                        <label for="message">Your Message</label>
+                                        <div class="form-icon icon-top">
+                                            <i class="fas fa-comment"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe for project updates and tech insights
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 btn-3d">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+
+                                    <div class="form-message mt-3"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="section-badge">COMMON QUESTIONS</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What's your typical response time?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I typically respond to all inquiries within 24 hours. For urgent matters, please include "URGENT" in your subject line or call me directly.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you work on hardware projects?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! As an ECE student specializing in embedded systems, I work on both hardware and software projects. I have experience with microcontroller programming, IoT devices, sensor integration, and PCB design.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What types of projects do you accept?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I work on embedded systems, IoT solutions, Python applications, AI/ML projects, and full-stack web development. I particularly enjoy projects that combine hardware and software for practical solutions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Are you available for internships or collaborations?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, I'm open to internships, collaborative projects, and research opportunities. I'm particularly interested in roles that involve embedded systems, IoT, or AI applications.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <span class="section-badge">WHERE TO FIND ME</span>
+                <h2 class="section-title">Based in Tamil Nadu</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Melvisharam, Tamil Nadu</h4>
+                        <p>Open to remote collaborations worldwide</p>
+                        <a href="https://www.google.com/maps/place/Melvisharam,+Tamil+Nadu/@12.9216328,79.2748292,15z/data=!3m1!4b1!4m6!3m5!1s0x3bad367adb322b9f:0xbf691d88c8571092!8m2!3d12.9157591!4d79.2799607!16zL20vMGY1bWM3?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                           target="_blank" class="btn btn-outline-light btn-sm mt-3">
+                            <i class="fas fa-map-pin me-2"></i>View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-card">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="cta-title">Ready to Start Your Project?</h3>
+                    <p class="cta-text">Let's discuss your requirements and create a solution that works for you.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="mailto:anasulkamileen@gmail.com" class="btn btn-light btn-lg btn-3d">
+                        Email Me <i class="fas fa-envelope ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.querySelector('.form-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                projectType: document.getElementById('projectType').value,
+                message: document.getElementById('message').value
+            };
+
+            // Simple validation
+            if (!formData.name || !formData.email || !formData.message || !formData.projectType) {
+                showFormMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual AJAX call in production)
+            setTimeout(() => {
+                showFormMessage('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+
+                // Send email notification (simulated)
+                const emailBody = `New Contact Form Submission:\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nProject Type: ${formData.projectType}\nMessage: ${formData.message}`;
+                console.log('Email would be sent with:', emailBody);
+            }, 1500);
+        });
+    }
+
+    function showFormMessage(message, type) {
+        if (!formMessage) return;
+
+        formMessage.textContent = message;
+        formMessage.className = 'form-message mt-3 alert';
+        formMessage.classList.add(type === 'success' ? 'alert-success' : 'alert-danger');
+        formMessage.style.display = 'block';
+
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    }
+
+    // 3D button effects
+    const buttons = document.querySelectorAll('.btn-3d');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-6px) scale(1.05)';
+            this.style.boxShadow = '0 15px 30px rgba(99, 102, 241, 0.3)';
+        });
+
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Form input focus effects
+    const formInputs = document.querySelectorAll('.form-control, .form-select');
+    formInputs.forEach(input => {
+        const parent = input.parentElement;
+
+        input.addEventListener('focus', function() {
+            parent.classList.add('focused');
+            const icon = parent.querySelector('.form-icon');
+            if (icon) icon.style.color = '#6366f1';
+        });
+
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                parent.classList.remove('focused');
+                const icon = parent.querySelector('.form-icon');
+                if (icon) icon.style.color = '';
+            }
+        });
+    });
+
+    // FAQ accordion animation
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
+});
+</script>
+
+<!-- Contact Page Specific CSS -->
+<style>
+/* Contact Hero Section */
+.contact-hero {
+    padding: 100px 0 80px;
+}
+
+.contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+.contact-info i {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #6366f1;
+    flex-shrink: 0;
+}
+
+.contact-info > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-info h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-image-wrapper {
+    position: relative;
+    padding: 40px;
+}
+
+.contact-img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.3);
+    border: 8px solid var(--bg-card);
+    position: relative;
+    z-index: 2;
+}
+
+.message-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background: var(--bg-card);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    animation: pulse 2s infinite;
+    border: 2px solid #6366f1;
+}
+
+.message-badge i {
+    color: #6366f1;
+    font-size: 1.2rem;
+}
+
+.message-badge span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background: var(--bg-secondary);
+}
+
+.contact-form-card {
+    background: var(--bg-card);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.form-sidebar {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.form-sidebar .form-title {
+    color: white;
+}
+
+.contact-details {
+    margin-bottom: 40px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.detail-item i {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.detail-item > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-item h6 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detail-item p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.social-connect h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: white;
+    color: #6366f1;
+    transform: translateY(-3px);
+}
+
+.form-content {
+    padding: 40px;
+}
+
+.form-content .form-title {
+    color: var(--text-primary);
+}
+
+.contact-form .form-floating {
+    position: relative;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding-left: 50px;
+    height: 60px;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    background: var(--bg-card);
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    color: var(--text-primary);
+}
+
+.contact-form textarea.form-control {
+    height: 150px;
+    resize: none;
+    padding-top: 20px;
+}
+
+.form-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    z-index: 10;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.icon-top {
+    top: 20px;
+    transform: none;
+}
+
+.contact-form .form-floating.focused .form-icon {
+    color: #6366f1;
+}
+
+.contact-form .form-check-input:checked {
+    background-color: #6366f1;
+    border-color: #6366f1;
+}
+
+.contact-form .form-check-label {
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.form-message {
+    display: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: var(--bg-primary);
+}
+
+.accordion-item {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 20px 25px;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--bg-card);
+    color: #6366f1;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236366f1'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236366f1'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    padding: 20px 25px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    background: var(--bg-secondary);
+}
+
+/* Map Section */
+.map-section {
+    background: var(--bg-secondary);
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--border);
+}
+
+.map-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.map-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.map-content i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.map-content h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.map-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0 0 15px 0;
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: #6366f1;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.cta-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.cta-text {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.btn-light {
+    background: white;
+    color: #6366f1;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background: #f8fafc;
+    color: #6366f1;
+    transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-form-card .row {
+        flex-direction: column;
+    }
+
+    .form-sidebar {
+        padding: 30px;
+    }
+
+    .form-content {
+        padding: 30px;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
+
+    .contact-info i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 60px 0 40px;
+    }
+
+    .contact-img {
+        max-width: 300px;
+        margin-top: 40px;
+    }
+
+    .message-badge {
+        bottom: -15px;
+        left: 10px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .cta-card {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .map-content h4 {
+        font-size: 1.5rem;
+    }
+
+    .map-content p {
+        font-size: 1rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-item {
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info-cards {
+        gap: 10px;
+    }
+
+    .contact-form .form-control,
+    .contact-form .form-select {
+        padding-left: 45px;
+        font-size: 0.9rem;
+    }
+
+    .form-icon {
+        left: 12px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-button {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-body {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .map-placeholder {
+        height: 250px;
+    }
+}
+    .contact-form .form-floating > label {
+    left: 60px;              /* ⬅ move label away from icon */
+    padding-left: 0;
+}
+
+</style>
+{% endblock %}

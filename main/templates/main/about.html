@@ -1,0 +1,784 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="about-hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <span class="section-badge">GET TO KNOW ME</span>
+                    <h1 class="display-4 fw-bold hero-title mb-4">
+                        About <span class="gradient-text">Me</span>
+                    </h1>
+                    <p class="lead hero-text mb-5">
+                        Final-year Electronics and Communication Engineering student passionate about creating
+                        practical solutions that bridge hardware and software. With strong academics and hands-on
+                        experience in embedded systems, IoT, and AI.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/contact/" class="btn btn-primary btn-lg btn-3d">
+                            <i class="fas fa-paper-plane me-2"></i>Let's Connect
+                        </a>
+                        <a href="{% static 'main/documents/CV_Anasul_Kamileen.pdf' %}"
+                            class="btn btn-ghost btn-lg btn-3d" download="CV_Anasul_Kamileen">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image-wrapper">
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                    </div>
+                    <div class="profile-container">
+                        <img src="{% static 'main/images/Profile.jpg' %}"
+                             class="img-fluid about-img floating"
+                             alt="Anasul Kamileen"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        <div class="experience-badge">
+                            <span></span>
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- My Story Section -->
+<section class="story-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="section-badge">MY JOURNEY</span>
+                <h2 class="section-title">My Story</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <h3 class="story-title">Where It All Began</h3>
+                    <p class="story-text">
+                        My journey into technology started with a fascination for how electronic devices work.
+                        This curiosity led me to pursue Electronics and Communication Engineering at C. Abdul Hakeem College.
+                    </p>
+                    <p class="story-text">
+                        During my studies, I discovered the power of combining hardware with intelligent software,
+                        which opened up endless possibilities for creating practical solutions to real-world problems.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <h3 class="story-title">My Philosophy</h3>
+                    <p class="story-text">
+                        I believe the best solutions come from <strong>understanding both hardware and software</strong>.
+                        Every project is an opportunity to solve real problems and make technology more accessible and efficient.
+                    </p>
+                    <p class="story-text">
+                        I'm passionate about continuous learning and staying updated with the latest technologies
+                        while maintaining strong fundamentals in electronics and programming principles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="section-badge">MY EXPERTISE</span>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Programming Languages -->
+            <div class="col-lg-4">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-code category-icon"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C / Embedded C</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development -->
+            <div class="col-lg-4">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Embedded Systems</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>IoT</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Django / PyQt</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI & Others -->
+            <div class="col-lg-4">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-brain category-icon"></i>
+                        <h3>AI & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>TensorFlow / Keras</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Git & Version Control</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="section-badge">EXPERIENCE & EDUCATION</span>
+                <h2 class="section-title">My Timeline</h2>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2025 - Present</div>
+                <div class="timeline-content">
+                    <h4>Intern - Embedded Systems</h4>
+                    <p class="company">Elite Fusion Technologies</p>
+                    <p>Working on solar panel cleaning system powered by AI and microcontroller. Developing smart aerator system for water quality monitoring.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 2022 - 2026</div>
+                <div class="timeline-content">
+                    <h4>B.E. ECE Student</h4>
+                    <p class="company">C. Abdul Hakeem College of Engineering</p>
+                    <p>Electronics and Communication Engineering with focus on embedded systems, IoT, and software development. Current CGPA: 8.93.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020 - 2022</div>
+                <div class="timeline-content">
+                    <h4>Higher Secondary</h4>
+                    <p class="company">12th Grade - 82.33%</p>
+                    <p>Completed higher secondary education with focus on Mathematics, Physics, and Chemistry.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2018 - 2020</div>
+                <div class="timeline-content">
+                    <h4>Secondary School</h4>
+                    <p class="company">10th Grade - 80%</p>
+                    <p>Completed secondary education with strong foundation in science and mathematics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Personal Interests -->
+<section class="interests-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="section-badge">BEYOND CODE</span>
+                <h2 class="section-title">Personal Interests</h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h5>Tech Reading</h5>
+                    <p>Stay updated with latest trends</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h5>Experimentation</h5>
+                    <p>Building & testing prototypes</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h5>Problem Solving</h5>
+                    <p>Technical challenges & puzzles</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h5>Collaboration</h5>
+                    <p>Team projects & knowledge sharing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-card">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="cta-title">Want to Know More?</h3>
+                    <p class="cta-text">I'm always open to discussing new opportunities and collaborative projects.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/contact/" class="btn btn-light btn-lg btn-3d">
+                        Get in Touch <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate skill bars when in view
+    const skillBars = document.querySelectorAll('.skill-progress');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const width = entry.target.style.width;
+                entry.target.style.width = '0%';
+                setTimeout(() => {
+                    entry.target.style.transition = 'width 1.5s ease-in-out';
+                    entry.target.style.width = width;
+                }, 300);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => observer.observe(bar));
+
+    // 3D button effects
+    const buttons = document.querySelectorAll('.btn-3d');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-6px) scale(1.05)';
+        });
+
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Interest cards animation
+    const interestCards = document.querySelectorAll('.interest-card');
+    interestCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) rotate(2deg)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) rotate(0)';
+        });
+    });
+});
+</script>
+
+<!-- About Page Specific CSS -->
+<style>
+/* About Hero Section */
+.about-hero {
+    padding: 100px 0 80px;
+}
+
+.about-image-wrapper {
+    position: relative;
+    padding: 40px;
+}
+
+.about-img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.3);
+    border: 8px solid var(--bg-card);
+    position: relative;
+    z-index: 2;
+}
+
+/* Story Section */
+.story-section {
+    background: var(--bg-primary);
+}
+
+.story-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    height: 100%;
+    border-left: 5px solid #6366f1;
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+}
+
+.story-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.story-text {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+    background: var(--bg-secondary);
+}
+
+.skills-category {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #6366f1;
+}
+
+.category-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-info span:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-info span:last-child {
+    font-weight: 600;
+    color: #6366f1;
+}
+
+.skill-bar {
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 4px;
+    width: 0;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background: var(--bg-primary);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--border);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-date {
+    width: 45%;
+    padding: 10px 30px;
+    text-align: right;
+    font-weight: 600;
+    color: #6366f1;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    text-align: left;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 30px;
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 2px solid var(--border);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+    border-color: #6366f1;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: #6366f1;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -40px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -40px;
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.timeline-content .company {
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Interests Section */
+.interests-section {
+    background: var(--bg-secondary);
+}
+
+.interest-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+.interest-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: #6366f1;
+}
+
+.interest-card h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.cta-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.cta-text {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.btn-light {
+    background: white;
+    color: #6366f1;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background: #f8fafc;
+    color: #6366f1;
+    transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: row !important;
+        justify-content: flex-start;
+    }
+
+    .timeline-date {
+        width: 30%;
+        text-align: left !important;
+        padding: 10px 20px;
+    }
+
+    .timeline-content {
+        width: 70%;
+        margin-left: 50px;
+    }
+
+    .timeline-content::before {
+        left: -40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 60px 0 40px;
+    }
+
+    .about-img {
+        max-width: 300px;
+    }
+
+    .story-card {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .skills-category {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .interest-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cta-card {
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timeline-date {
+        width: 100%;
+        text-align: left !important;
+        padding: 10px 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+}
+</style>
+{% endblock %}

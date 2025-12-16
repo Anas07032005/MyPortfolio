@@ -1,0 +1,887 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<!-- Projects Hero Section -->
+<section class="projects-hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8">
+                <div class="hero-content">
+                    <span class="section-badge">MY PORTFOLIO</span>
+                    <h1 class="display-4 fw-bold hero-title mb-4">
+                        My <span class="gradient-text">Projects</span>
+                    </h1>
+                    <p class="lead hero-text">
+                        A collection of my practical projects showcasing innovative solutions in embedded systems,
+                        IoT, software development, and AI applications.
+                    </p>
+
+                    <!-- Filter Buttons -->
+                    <div class="filter-buttons mt-5">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+                        <button class="filter-btn" data-filter="software">Software</button>
+                        <button class="filter-btn" data-filter="iot">IoT</button>
+                        <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="projects-stats">
+                    <div class="stat-circle">
+                        <h3>6+</h3>
+                        <p>Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Grid Section -->
+<section class="projects-grid py-5">
+    <div class="container">
+        <!-- Featured Project -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="featured-project-card" data-category="embedded">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="project-image">
+                                <img src="{% static 'main/images/solar_panel.png' %}"
+                                     alt="Solar Panel Cleaning System" class="img-fluid">
+                                <div class="project-badge featured">Featured</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="project-info">
+                                <div class="project-meta">
+                                    <span class="project-category">Embedded Systems</span>
+                                    <span class="project-date">2025</span>
+                                </div>
+                                <h3 class="project-title">Solar Panel Cleaning System</h3>
+                                <p class="project-description">
+                                    Automated hardware system powered by AI and microcontroller that detects dust accumulation
+                                    and automatically cleans solar panels for optimal efficiency. Developed during internship
+                                    at Elite Fusion Technologies.
+                                </p>
+                                <div class="tech-stack">
+                                    <span class="tech">Embedded C</span>
+                                    <span class="tech">ESP32</span>
+                                    <span class="tech">AI Vision</span>
+                                    <span class="tech">IoT</span>
+                                </div>
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-bolt"></i>
+                                        <div>
+                                            <h5>AI-Powered</h5>
+                                            <small>Dust Detection</small>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-robot"></i>
+                                        <div>
+                                            <h5>Automated</h5>
+                                            <small>Cleaning System</small>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-chart-line"></i>
+                                        <div>
+                                            <h5>30%+</h5>
+                                            <small>Efficiency Boost</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary btn-3d">
+                                        <i class="fas fa-info-circle me-2"></i>View Details
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-3d">
+                                        <i class="fab fa-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row g-4" id="projects-container">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6" data-category="software">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/medical_billing.jpg' %}"
+                             alt="Medical Billing App" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">Software</span>
+                            <span class="date">2024</span>
+                        </div>
+                        <h4 class="project-title">Medical Billing App</h4>
+                        <p class="project-excerpt">
+                            Desktop application with CRUD operations for managing medical bills, patients, and inventory.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">PyQt</span>
+                            <span class="tech">SQL</span>
+                            <span class="tech">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6" data-category="iot">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/iot_lock.png' %}"
+                             alt="IoT Door Lock" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">IoT</span>
+                            <span class="date">2024</span>
+                        </div>
+                        <h4 class="project-title">IP-based Door Lock</h4>
+                        <p class="project-excerpt">
+                            Secure web-based door lock system using ESP32 with remote authentication and control.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">ESP32</span>
+                            <span class="tech">HTML/CSS</span>
+                            <span class="tech">Embedded C</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6" data-category="ai">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/face_recognition.png' %}"
+                             alt="Face Recognition" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">AI/ML</span>
+                            <span class="date">2024</span>
+                        </div>
+                        <h4 class="project-title">Face Recognition Model</h4>
+                        <p class="project-excerpt">
+                            Custom face recognition system using DeepFace for accurate person identification.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">DeepFace</span>
+                            <span class="tech">TensorFlow</span>
+                            <span class="tech">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6" data-category="embedded">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/aerator.png' %}"
+                             alt="Smart Aerator" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">Embedded Systems</span>
+                            <span class="date">2025</span>
+                        </div>
+                        <h4 class="project-title">Smart Aerator System</h4>
+                        <p class="project-excerpt">
+                            Automated aerator for fish tanks that monitors dissolved oxygen levels and controls aeration.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">Embedded C</span>
+                            <span class="tech">Sensors</span>
+                            <span class="tech">IoT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6" data-category="software">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/portfolio.png' %}"
+                             alt="Portfolio Website" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">Software</span>
+                            <span class="date">2025</span>
+                        </div>
+                        <h4 class="project-title">Portfolio Website</h4>
+                        <p class="project-excerpt">
+                            Responsive portfolio website built with Django, Bootstrap, and custom CSS animations.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">Django</span>
+                            <span class="tech">Bootstrap</span>
+                            <span class="tech">CSS/JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6" data-category="software">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'main/images/billing_software.jpg' %}"
+                             alt="Billing Software" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="category">Software</span>
+                            <span class="date">2024</span>
+                        </div>
+                        <h4 class="project-title">Billing Software</h4>
+                        <p class="project-excerpt">
+                            Complete billing system with inventory management, customer database, and invoice generation.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">PyQt</span>
+                            <span class="tech">SQL</span>
+                            <span class="tech">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-card">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="cta-title">Have a Project Idea?</h3>
+                    <p class="cta-text">Let's collaborate and bring your hardware or software ideas to life.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/contact/" class="btn btn-light btn-lg btn-3d">
+                        Start a Project <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+// Filter Projects
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card, .featured-project-card');
+    const loadMoreBtn = document.getElementById('load-more');
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            // Filter projects
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+
+                if (filterValue === 'all' || filterValue === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // Project card hover effects
+    const projectCardsAll = document.querySelectorAll('.project-card');
+    projectCardsAll.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Button 3D effects
+    const buttons = document.querySelectorAll('.btn-3d');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-6px) scale(1.05)';
+        });
+
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+</script>
+
+<!-- Projects Page Specific CSS -->
+<style>
+/* Projects Hero Section */
+.projects-hero {
+    padding: 100px 0 80px;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #6366f1;
+    color: #6366f1;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.projects-stats {
+    position: relative;
+}
+
+.stat-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    margin: 0 auto;
+}
+
+.stat-circle h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-circle p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Featured Project */
+.featured-project-card {
+    background: var(--bg-card);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px var(--shadow);
+    transition: all 0.4s ease;
+    border: 1px solid var(--border);
+}
+
+.featured-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(99, 102, 241, 0.15);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-info {
+    padding: 40px;
+}
+
+.project-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.project-category {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.project-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.tech {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.tech:hover {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+    transform: translateY(-2px);
+}
+
+.project-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.project-stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-stats .stat i {
+    font-size: 2rem;
+    color: #6366f1;
+}
+
+.project-stats .stat h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-stats .stat small {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Regular Project Cards */
+.project-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.4s ease;
+    border: 1px solid var(--border);
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+.project-card .project-image {
+    height: 250px;
+    position: relative;
+}
+
+.project-card .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(99, 102, 241, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .view-project {
+    transform: scale(1);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-card .project-meta {
+    margin-bottom: 10px;
+}
+
+.category {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.project-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-card .tech-stack {
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.project-link {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.project-link:hover {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+    transform: translateY(-3px);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.cta-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.cta-text {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.btn-light {
+    background: white;
+    color: #6366f1;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background: #f8fafc;
+    color: #6366f1;
+    transform: translateX(10px);
+}
+
+/* Animation for filter */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-hero {
+        padding: 60px 0 40px;
+    }
+
+    .stat-circle {
+        width: 150px;
+        height: 150px;
+        margin-top: 40px;
+    }
+
+    .stat-circle h3 {
+        font-size: 2rem;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+    }
+
+    .featured-project-card .row {
+        flex-direction: column;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta-card {
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+</style>
+{% endblock %}
